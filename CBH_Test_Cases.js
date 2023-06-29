@@ -37,7 +37,7 @@ describe("FizzBuzz", () => {
     );
   });
 
-  // 4. Event with partitionKey as string with length(partitionKey) >  MAX_PARTITION_KEY_LENGTH
+  // 5. Event with partitionKey as string with length(partitionKey) >  MAX_PARTITION_KEY_LENGTH
   // - assume it returns createHash(8......)
   test("Event without partitionKey should result in createHash(8......)", () => {
     expect(
