@@ -22,7 +22,7 @@ describe("FizzBuzz", () => {
     expect(deterministicPartitionKey({ partitionKey: 9 })).toStrictEqual("9");
   });
 
-  // 3. Event with partitionKey as non-string with length(partitionKey) >  MAX_PARTITION_KEY_LENGTH
+  // 4. Event with partitionKey as non-string with length(partitionKey) >  MAX_PARTITION_KEY_LENGTH
   // - assume it returns createHash(8......)
   test("Event without partitionKey should result in createHash(8......)", () => {
     expect(
@@ -30,14 +30,14 @@ describe("FizzBuzz", () => {
     ).toStrictEqual("createHash(8......)");
   });
 
-  // 4. Event with partitionKey as string
+  // 5. Event with partitionKey as string
   test("Event with partitionKey as string should result in the partitionKey", () => {
     expect(deterministicPartitionKey({ partitionKey: "256" })).toStrictEqual(
       "256"
     );
   });
 
-  // 5. Event with partitionKey as string with length(partitionKey) >  MAX_PARTITION_KEY_LENGTH
+  // 6. Event with partitionKey as string with length(partitionKey) >  MAX_PARTITION_KEY_LENGTH
   // - assume it returns createHash(8......)
   test("Event without partitionKey should result in createHash(8......)", () => {
     expect(
